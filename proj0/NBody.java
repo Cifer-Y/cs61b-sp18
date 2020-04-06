@@ -30,8 +30,6 @@ public class NBody {
     double dt = Double.parseDouble(args[1]);
     String path = args[2];
     Planet[] ps = readPlanets(path);
-    System.out.println(T);
-    System.out.println(dt);
     
 
     double r = readRadius(path);
