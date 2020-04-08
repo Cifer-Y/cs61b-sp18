@@ -17,7 +17,7 @@ public class ArrayDeque<T> {
     public void addFirst(T x) {
         extend();
         items[nextFirst] = x;
-        nextFirst = (nextFirst - 1) % cap;
+        nextFirst = (nextFirst - 1 + cap) % cap;
         size++;
     }
 
@@ -68,7 +68,7 @@ public class ArrayDeque<T> {
         if (size == 0) {
             return null;
         }
-        int lastIndex = (nextLast - 1) % cap;
+        int lastIndex = (nextLast - 1 + cap) % cap;
         T ret = items[lastIndex];
         items[lastIndex] = null;
         nextLast = lastIndex;
