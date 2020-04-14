@@ -29,6 +29,7 @@ public class TestPalindrome {
         assertFalse(palindrome.isPalindrome("persiflage", cc));
         assertTrue(palindrome.isPalindrome("jufti", cc));
         assertTrue(palindrome.isPalindrome("", cc));
+        assertTrue(palindrome.isPalindrome("detrude", cc));
         assertTrue(palindrome.isPalindrome("a", cc));
     }
 }

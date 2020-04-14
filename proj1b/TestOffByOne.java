@@ -10,6 +10,7 @@ public class TestOffByOne {
     @Test
     public void testEqualChars() {
         assertTrue(offByOne.equalChars('b', 'a'));
+        assertTrue(offByOne.equalChars('a', 'b'));
         assertFalse(offByOne.equalChars('a', 'a'));
     }
 }
