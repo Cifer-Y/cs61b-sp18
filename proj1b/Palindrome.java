@@ -7,7 +7,7 @@ public class Palindrome {
         return words;
     }
 
-    public boolean isPalindrome(String word){
+    public boolean isPalindrome(String word) {
         return checkIsPalindrome(wordToDeque(word));
     }
 
@@ -16,24 +16,24 @@ public class Palindrome {
     }
 
     private boolean checkIsPalindromeWithCC(Deque<Character> words, CharacterComparator cc) {
-        if(words.size() <= 1) {
+        if (words.size() <= 1) {
             return true;
         }
         Character front = words.removeFirst();
         Character tail = words.removeLast();
-        if(!cc.equalChars(front, tail)) {
+        if (!cc.equalChars(front, tail)) {
             return false;
         }
         return checkIsPalindromeWithCC(words, cc);
     }
 
     private boolean checkIsPalindrome(Deque<Character> words) {
-        if(words.size() <= 1) {
+        if (words.size() <= 1) {
             return true;
         }
         Character front = words.removeFirst();
         Character tail = words.removeLast();
-        if(front != tail) {
+        if (front != tail) {
             return false;
         }
         return checkIsPalindrome(words);
